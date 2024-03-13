@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        #controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        #controls button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video id="video" controls>
+            <source src="vedio/v.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="controls">
+            <button id="play-pause">&#9654;</button>
+            <button id="subtitles">CC</button>
+            <button id="settings">&#9881;</button>
+            <button id="multiplayer">&#128250;</button>
+            <button id="theater">&#127909;</button>
+            <button id="fullscreen">&#8597;</button>
+        </div>
+    </div>
+
+    <script>
+      const video = document.getElementById('video');
+       const subtitlesButton = document.getElementById('subtitles');
+
+       subtitlesButton.addEventListener('click', toggleSubtitles);
+        const video = document.getElementById('video');
+        const playPauseButton = document.getElementById('play-pause');
+        const subtitlesButton = document.getElementById('subtitles');
+        const settingsButton = document.getElementById('settings');
+        const multiplayerButton = document.getElementById('multiplayer');
+        const theaterButton = document.getElementById('theater');
+        const fullscreenButton = document.getElementById('fullscreen');
+
+        playPauseButton.addEventListener('click', togglePlayPause);
+        subtitlesButton.addEventListener('click', toggleSubtitles);
+        settingsButton.addEventListener('click', openSettings);
+        multiplayerButton.addEventListener('click', toggleMultiplayer);
+        theaterButton.addEventListener('click', toggleTheater);
+        fullscreenButton.addEventListener('click', toggleFullscreen);
+
+        function togglePlayPause() {
+            if (video.paused) {
+                video.play();
+                playPauseButton.textContent = '❚❚';
+            } else {
+                video.pause();
+                playPauseButton.textContent = '▶';
+            }
+        }
+
+        function toggleSubtitles() {
+            // Implement your subtitles logic here
+            alert('Toggle Subtitles');
+
+        }
+
+        function openSettings() {
+            // Implement your settings logic here
+            alert('Open Settings');
+        }
+
+        function toggleMultiplayer() {
+            // Implement your multiplayer logic here
+            alert('Toggle Multiplayer');
+        }
+
+        function toggleTheater() {
+            document.getElementById('video-container').classList.toggle('theater-mode');
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                video.requestFullscreen().catch(err => {
+                    console.error(`Fullscreen Error: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Portal Dropdown</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Dropdown Styles */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      width: 620px;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display:block;
+    }
+
+    .dropdown-section {
+      float:left;
+      padding: 5px;
+      border-left: 1px solid #ccc;
+      width: 23%;
+    }
+
+    .dropdown-link {
+      text-decoration: none;
+      color: #333;
+      display: block;
+      padding: 8px 0;
+    }
+
+    /* Responsive Styles */
+    @media screen and (max-width: 768px) {
+      .dropdown {
+        margin: 10px;
+      }
+
+      .dropdown-content {
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Job Portal Dropdown -->
+<span>Portals<span>
+<div class="dropdown">
+
+  <span> Jobs</span>
+  <div class="dropdown-content">
+    <div class="dropdown-section">
+      <h3>Popular Categories</h3>
+      <a href="#" class="dropdown-link">IT Jobs</a>
+      <a href="#" class="dropdown-link">Sales Jobs</a>
+      <a href="#" class="dropdown-link">Marketing Jobs</a>
+      <a href="#" class="dropdown-link">Data Science Jobs</a>
+      <a href="#" class="dropdown-link">HR Jobs</a>
+      <a href="#" class="dropdown-link">Engineering Jobs</a>
+    </div>
+
+    <div class="dropdown-section">
+      <h3>Jobs in Demand</h3>
+      <a href="#" class="dropdown-link">Fresher Jobs</a>
+      <a href="#" class="dropdown-link">MNC Jobs</a>
+      <a href="#" class="dropdown-link">Remote Jobs</a>
+      <a href="#" class="dropdown-link">Work from Home Jobs</a>
+      <a href="#" class="dropdown-link">Walk-in Jobs</a>
+      <a href="#" class="dropdown-link">Part-time Jobs</a>
+    </div>
+
+    <div class="dropdown-section">
+      <h3>Jobs by Location</h3>
+      <a href="#" class="dropdown-link">Jobs in Delhi</a>
+      <a href="#" class="dropdown-link">Jobs in Mumbai</a>
+      <a href="#" class="dropdown-link">Jobs in Bangalore</a>
+      <a href="#" class="dropdown-link">Jobs in Hyderabad</a>
+      <a href="#" class="dropdown-link">Jobs in Chennai</a>
+      <a href="#" class="dropdown-link">Jobs in Pune</a>
+    </div>
+
+    <div class="dropdown-section">
+      <h3>Explore More Jobs</h3>
+      <a href="#" class="dropdown-link">Jobs by Category</a>
+      <a href="#" class="dropdown-link">Jobs by Skill</a>
+      <a href="#" class="dropdown-link">Jobs by Location</a>
+      <a href="#" class="dropdown-link">Jobs by Designation</a>
+      <a href="#" class="dropdown-link">Create Free Job Alert</a>
+    </div>
+  </div>
+  </div>
+
+<div class="dropdown">
+
+    <span> Companies</span>
+    <div class="dropdown-content">
+      <div class="dropdown-section">
+        <h3>Explore categories</h3>
+        <a href="#" class="dropdown-link">Unicorn</a>
+        <a href="#" class="dropdown-link">MNC</a>
+        <a href="#" class="dropdown-link">Startup</a>
+        <a href="#" class="dropdown-link">Product based</a>
+        <a href="#" class="dropdown-link">Internet</a>
+      </div>
+
+      <div class="dropdown-section">
+        <h3>Explore collections</h3>
+        <a href="#" class="dropdown-link">Top companies</a>
+        <a href="#" class="dropdown-link">IT companies</a>
+        <a href="#" class="dropdown-link">Fintech companies</a>
+        <a href="#" class="dropdown-link">Sponsored companies</a>
+        <a href="#" class="dropdown-link">Featured companies</a>
+      </div>
+
+      <div class="dropdown-section">
+        <h3>Research companies by Ambitionbox</h3>
+        <a href="#" class="dropdown-link">Interview questions</a>
+        <a href="#" class="dropdown-link">Company salaries</a>
+        <a href="#" class="dropdown-link">Company reviews</a>
+        <a href="#" class="dropdown-link">Jobs in Hyderabad</a>
+        <a href="#" class="dropdown-link">Jobs in Chennai</a>
+        <a href="#" class="dropdown-link">JSalary Calculator</a>
+      </div>
+    </div>
+</div>
+
+<div class="dropdown">
+
+<span> Services</span>
+<div class="dropdown-content">
+  <div class="dropdown-section">
+    <h3>Resume writing</h3>
+    <a href="#" class="dropdown-link">Text resume</a>
+    <a href="#" class="dropdown-link">Visual resume</a>
+    <a href="#" class="dropdown-link">Resume critique</a>
+    <a href="#" class="dropdown-link">Find Jobs</a>
+
+
+  </div>
+
+  <div class="dropdown-section">
+    <h3>Get recruiter's attention</h3>
+    <a href="#" class="dropdown-link">Resume display</a>
+    <a href="#" class="dropdown-link">Job search booster</a>
+    <a href="#" class="dropdown-link">Monthly subscriptions</a>
+    <a href="#" class="dropdown-link">Basic & premium plans</a>
+  </div>
+
+  <div class="dropdown-section">
+    <h3>Free resume resources</h3>
+    <a href="#" class="dropdown-link">Resume maker for freshers</a>
+    <a href="#" class="dropdown-link">Resume quality score</a>
+    <a href="#" class="dropdown-link">Resume samples</a>
+    <a href="#" class="dropdown-link">Job letter samples</a>
+  </div>
+
+  <div class="dropdown-section">
+    <h3>Find Jobs</h3>
+    <a href="#" class="dropdown-link">Jobs4u</a>
+    <a href="#" class="dropdown-link">Priority applicant</a>
+    <a href="#" class="dropdown-link">Contact us</a>
+  </div>
+</div>
+</div>
+
+
+
+<!-- Search Bar -->
+<div class="dropdown">
+  <form class="form-control-inline">
+    <input type="search" placeholder="Search Jobs">
+    <button type="submit">Search</button>
+  </form>
+</div>
+
+<a href="#">Login</a>
+<a href="#">Register</a>
+
+<!-- Dropdown -->
+
+
+
+
+</body>
+</html>

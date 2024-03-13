@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        #controls {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+
+        #controls button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 0 10px;
+        }
+
+        #settings-menu {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 5px;
+            display: none;
+            z-index: 1000;
+        }
+
+        #settings-menu label {
+            display: block;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        #settings-menu select {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+
+        #settings-menu button {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="video-container">
+        <video id="video" controls>
+            <source src="vedio/v.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="controls">
+            <button id="settings">&#9881;</button>
+        </div>
+        <div id="settings-menu">
+            <label for="quality">Quality:</label>
+            <select id="quality" name="quality">
+                <option value="720p">720p</option>
+                <option value="1080p">1080p</option>
+                <!-- Add more quality options as needed -->
+            </select>
+
+            <label for="speed">Playback Speed:</label>
+            <select id="speed" name="speed">
+                <option value="1.0">Normal</option>
+                <option value="1.25">1.25x</option>
+                <option value="1.5">1.5x</option>
+                <!-- Add more speed options as needed -->
+            </select>
+
+            <button id="apply-settings">Apply Settings</button>
+        </div>
+    </div>
+
+    <script>
+        const video = document.getElementById('video');
+        const settingsButton = document.getElementById('settings');
+        const settingsMenu = document.getElementById('settings-menu');
+        const applySettingsButton = document.getElementById('apply-settings');
+        const qualitySelect = document.getElementById('quality');
+        const speedSelect = document.getElementById('speed');
+
+        settingsButton.addEventListener('click', toggleSettingsMenu);
+        applySettingsButton.addEventListener('click', applySettings);
+
+        function toggleSettingsMenu() {
+            settingsMenu.style.display = settingsMenu.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function applySettings() {
+            const selectedQuality = qualitySelect.value;
+            const selectedSpeed = speedSelect.value;
+
+            // Implement logic to apply settings (e.g., change video quality and playback speed)
+            alert(`Applying settings:\nQuality: ${selectedQuality}\nPlayback Speed: ${selectedSpeed}`);
+
+            // Close the settings menu
+            settingsMenu.style.display = 'none';
+        }
+    </script>
+</body>
+</html>
